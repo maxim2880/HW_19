@@ -1,5 +1,6 @@
 GET http://127.0.0.1:10001/movies/
 Accept: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjU3MDQ2OTA5fQ.WN_EoTGbzWs7lJSncssIlDpH_d6Dodal-SGNyg0Lpwc
 
 ###
 
@@ -46,6 +47,8 @@ Accept: application/json
 POST http://127.0.0.1:10001/movies/
 Accept: application/json
 Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjU3MDQ2OTA5fQ.WN_EoTGbzWs7lJSncssIlDpH_d6Dodal-SGNyg0Lpwc
+
 
 {
   "title": "Гарри Поттер мой кумир!",
@@ -92,3 +95,50 @@ Content-Type: application/json
 ###
 
 DELETE http://127.0.0.1:10001/movies/21
+
+###
+
+POST http://127.0.0.1:10001/users/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "te123213st",
+  "role": "admin"
+}
+
+###
+POST http://127.0.0.1:10001/auth/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "te123213st"
+}
+
+###
+
+PUT http://127.0.0.1:10001/genres/20
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "test genre"
+
+}
+
+###
+
+GET http://127.0.0.1:10001/genres/20
+
+###
+
+PUT http://127.0.0.1:10001/auth/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "refresh_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJyb2xlIjoidGVzdCIsImV4cCI6MTY1OTYzNDg0MH0.Iv0CrgCgEMgdCieKctLSLEjRZ8UM8z6MvXPbE0Ok9fA"
+}
