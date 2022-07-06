@@ -1,6 +1,6 @@
 GET http://127.0.0.1:10001/movies/
 Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjU3MDQ2OTA5fQ.WN_EoTGbzWs7lJSncssIlDpH_d6Dodal-SGNyg0Lpwc
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjU3MTE2OTM2fQ.bxZGW33_oOzSZkW1MQtCgRRWvmoy--EnG7pUQz0K0iw
 
 ###
 

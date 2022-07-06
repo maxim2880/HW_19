@@ -9,7 +9,7 @@ def auth_requered(func):
         if not "Authorization" in request.headers:
             abort(401)
 
-        token = request.headers['Authorization']
+        token = (request.headers['Authorization']).split("Bearer ")[-1]
         try:
             jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALG])
         except Exception as e:
@@ -25,7 +25,7 @@ def admin_requered(func):
         if not "Authorization" in request.headers:
             abort(401)
 
-        token = request.headers['Authorization']
+        token = (request.headers['Authorization']).split("Bearer ")[-1]
         try:
             data = jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALG])
         except Exception as e:
